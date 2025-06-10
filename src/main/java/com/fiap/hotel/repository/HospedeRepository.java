@@ -8,6 +8,6 @@ import com.fiap.hotel.repository.entity.HospedeEntity;
 
 public interface HospedeRepository extends JpaRepository<HospedeEntity, Integer>{
 
-    List<HospedeEntity> findByNomeOrEmailOrDocumento(String nome, String email, String documento);
+    List<HospedeEntity> findByNomeCompletoOrEmailOrDocumento(String nome, String email, String documento);
 
 }

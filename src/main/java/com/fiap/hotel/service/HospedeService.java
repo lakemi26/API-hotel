@@ -30,7 +30,7 @@ public class HospedeService {
     }
 
     public List<Hospede> findByNomeOrEmailOrDocumento(String nome, String email, String documento){
-        List<HospedeEntity> hospedes = repository.findByNomeOrEmailOrDocumento(nome, email, documento);
+        List<HospedeEntity> hospedes = repository.findByNomeCompletoOrEmailOrDocumento(nome, email, documento);
 
         return mapper.toDomainList(hospedes);
     }
