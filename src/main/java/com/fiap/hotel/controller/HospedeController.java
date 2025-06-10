@@ -8,9 +8,13 @@ import com.fiap.hotel.mapper.HospedeMapper;
 
 import jakarta.validation.Valid;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
@@ -38,5 +42,23 @@ public class HospedeController {
         Hospede hospedeCadastrado = hospedeBusiness.create(mapper.toDomain(dto));
         return mapper.toUsaDTO(hospedeCadastrado);
     }
+
+    @PutMapping
+    @ResponseStatus(HttpStatus.OK)
+    public HospedeDTO update(@RequestBody @Valid HospedeDTO dto) {
+        Hospede hospedeAtualizado = hospedeBusiness.update(mapper.toDomain(dto));
+
+        return mapper.toDTO(hospedeAtualizado);
+    }
+
+    @GetMapping
+    @ResponseStatus(HttpStatus.OK)
+    public List<HospedeDTO>findAll(){
+        List<Hospede> hospedes = hospedeBusiness.findAll();
+
+        return mapper.toDTOList(hospedes);
+    }
+
+    
 
 }
