@@ -19,11 +19,11 @@ Campos:
 - 📧 Email
 
 **Endpoints:**
-
-POST /hospede
-PUT /hospede
-GET /hospede
-GET /hospede/filtro?nome=&documento=&email=?
+|----|------|
+|POST |hospede|
+|PUT |hospede|
+|GET |hospede|
+|GET |hospede/filtro?nome=&documento=&email=?|
 
 ---
 
@@ -37,11 +37,11 @@ Campos:
   - Duplo 👬
 
 **Endpoints:**
-
-POST/quarto
-PUT/quarto
-GET/quarto
-GET/quarto?status=?&acomodacao=?
+|----|------|
+|POST|quarto|
+|PUT|quarto|
+|GET|quarto|
+|GET|quarto?status=?&acomodacao=?|
 
 ---
 
@@ -55,11 +55,12 @@ Campos:
 
 **Endpoints:**
 
-Post/reserva
-Put/reserva
-Patch/reserva
-Get/reserva/{id}
-get/reserva?data_entrada=?&data_saida=?&status=?
+|----|------|
+|Post|reserva|
+|Put|reserva|
+|Patch|reserva|
+|Get|reserva/{id}|
+|get|reserva?data_entrada=?&data_saida=?&status=?|
 
 ---
 
